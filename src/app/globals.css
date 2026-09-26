@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --color-page: #0f1115;
+  --color-surface: #14171e;
+  --color-surface-2: #1f242d;
+  --color-line: #232732;
+  --color-line-strong: #343a46;
+  --color-accent: #ccff00;
+  --color-accent-soft: #1a2312;
+  --color-muted: #9ca3af;
+  --color-subtle: #6b7280;
+
+  --animate-dropdown: dropdown-in 140ms ease-out;
+
+  @keyframes dropdown-in {
+    from {
+      opacity: 0;
+      transform: translateY(-4px) scale(0.97);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+}
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-oswald);
+}
+
+.Toastify {
+  --toastify-color-dark: #14171e;
+  --toastify-text-color-dark: #ffffff;
+  --toastify-color-success: #ccff00;
+  --toastify-color-info: #ccff00;
+  --toastify-icon-color-success: #ccff00;
+  --toastify-icon-color-info: #ccff00;
+  --toastify-font-family: var(--font-inter);
+  --toastify-toast-min-height: 52px;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-page);
+  color: #ffffff;
+}
+
+.Toastify__toast {
+  border: 1px solid var(--color-line);
+  border-radius: 12px;
+  font-size: 14px;
+}
